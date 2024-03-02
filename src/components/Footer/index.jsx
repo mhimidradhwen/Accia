@@ -19,7 +19,7 @@ const currentYear = new Date().getFullYear();
 
 export function FooterWithSocialLinks() {
   return (
-    <footer className="rbg-neutral-950 relative w-full overflow-hidden " style={{ background: "black" }}>
+    <footer className="rbg-neutral-950 relative w-full overflow-hidden mt-auto" >
       <div className="bg-neutral-950 max-w-full px-4 py-2 bg-zinc-400">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 lg:grid-cols-3 ">
           <div className="px-8 xs:flex xs:items-center xs:justify-center">

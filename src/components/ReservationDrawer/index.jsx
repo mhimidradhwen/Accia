@@ -15,8 +15,8 @@ export function ReservationDrawer() {
  
   return (
     <React.Fragment>
-      <Button onClick={openDrawer}>Reserver</Button>
-     <Drawer open={open} onClose={closeDrawer}>
+      <Button onClick={openDrawer} className=" bg-primary">Reserver</Button>
+     <Drawer open={open} onClose={closeDrawer} overlay={false}>
         <div className="flex items-center justify-between px-4 pb-2 pt-4">
           <Typography variant="h5" color="blue-gray">      Reservation   </Typography>
           <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
@@ -48,7 +48,7 @@ export function ReservationDrawer() {
           <Input type="email" label="Email" />
           <Input type="tel" label="Tèléphone" />
 
-          <Button>Reserver</Button>
+          <Button className=" bg-primary">Reserver</Button>
         </form>
       </Drawer>
     </React.Fragment>
