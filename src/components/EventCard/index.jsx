@@ -10,7 +10,10 @@ import { FaEye } from "react-icons/fa";
 
 import { ReservationDrawer } from "../ReservationDrawer";
 import {  } from "@heroicons/react/solid";
+import { useNavigate } from "react-router-dom";
 export function EventCard({ title, description, date, hour }) {
+  const navigate =useNavigate();
+  const handleButtonNavigation =() => (navigate("/events/singleEvent"))
   return (
     <Card className="max-w-[24rem] overflow-hidden">
       <CardHeader
@@ -38,7 +41,7 @@ export function EventCard({ title, description, date, hour }) {
           <Typography className="font-normal">{date}</Typography>
         </div>
         <div className="flex  flex-row justify-between">
-          <Button variant="outlined" className="flex items-center gap-3 text-primary ">
+          <Button variant="outlined" className="flex items-center gap-3 text-primary " onClick={handleButtonNavigation}>
           <FaEye size="20" />
             Voir Plus
 

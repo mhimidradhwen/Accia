@@ -1,7 +1,9 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}",
+            'node_modules/flowbite-react/lib/esm/**/*.js'
+],
   theme: {
     screens: {
       'sm': '640px',
@@ -21,8 +23,11 @@ module.exports = withMT({
     },
     extend: {},
     colors: {
-      primary:"#00508F" 
+      primary:"#00508F" ,
+      fotter:"#424856"
       },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 });
